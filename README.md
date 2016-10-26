@@ -4,7 +4,7 @@ TryLock mutex for Golang
 
 Example:
 
-```golang
+```go
 import(
     "fmt"
 
