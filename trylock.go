@@ -1,4 +1,4 @@
-package trylock
+package gotrylock
 
 import (
 	"errors"
@@ -25,6 +25,10 @@ func (tryMutex *TryMutex) Unlock() {
 	if !atomic.CompareAndSwapUint32(&tryMutex.flag, 1, 0) {
 		panic(ErrUnlockOfUnlockedMutex)
 	}
+}
+
+func (tryMutex *TryMutex) Locked() bool {
+	return tryMutex.flag == 1
 }
 
 func (tryMutex *TryMutex) TryLock(timeout time.Duration) (ok bool) {
