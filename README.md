@@ -4,7 +4,7 @@ TryLock mutex for Golang
 
 Example:
 
-'''go
+```golang
 import(
     "fmt"
 
@@ -33,10 +33,10 @@ func main() {
 	tlm.Unlock()
 	log.Println("Yay!")
 }
-'''
+```
 
 Output:
-'''
+```
 2016/10/26 11:46:47 main start!
 2016/10/26 11:46:48 timeout!
 2016/10/26 11:46:49 timeout!
@@ -47,4 +47,4 @@ Output:
 2016/10/26 11:46:55 main start!
 2016/10/26 11:46:55 main stop!
 2016/10/26 11:46:55 Yay!
-'''
+```
