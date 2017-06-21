@@ -11,8 +11,8 @@ import(
     "github.com/ninedraft/gotrylock"
 )
 
-func main() { 
-    tlm := gotrylock.TryMutex{}
+func main() {
+    tlm := &gotrylock.TryMutex{}
 	tlm.Lock()
 	log.Println("main start!")
 	go func() {
